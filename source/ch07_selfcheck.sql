@@ -17,8 +17,8 @@ join settings s ON u.id = s.user_id;
 -- 파일명      | 게시자
 -- ------------------------
 SELECT
-    filename 파일명,
-    nickname 게시자
+    filename as '파일명',
+    nickname as '게시자'
 from photos p
 join users u on p.user_id = u.id;
 
@@ -28,10 +28,10 @@ join users u on p.user_id = u.id;
 -- 파일명      | 게시자
 -- ------------------------
 SELECT
-    filename 파일명,
+    filename as '파일명',
     nickname 게시자
 from photos p
-left join users u on p.user_id = u.id;
+LEFT join users u on p.user_id = u.id;
 
 -- 1. 사용자 닉네임과 계정 공개 여부 조회
 
